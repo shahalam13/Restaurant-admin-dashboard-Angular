@@ -3,25 +3,25 @@
     <h5 class="card-title">{{ title | translate}}</h5>
     <div class="dashboard-best-sellers">
 
-      <perfect-scrollbar class="scroll" [config]="{suppressScrollX: true, wheelPropagation: false}">
+      <perfect-scrollbar class="scroll" [config]="{suppressScrollX: true,wheelPropagation: false}">
         <ngx-datatable [rows]="rows" [columns]="columns" [columnMode]="columnMode"
           [sorts]="[{ prop: 'title', dir: 'asc' }]">
-          <ngx-datatable-column name="Title" [flexGrow]="2">
+          <ngx-datatable-column name="Title" [flexGrow]="2" [sortable]="true">
             <ng-template let-value="value" ngx-datatable-cell-template>
               {{ value }}
             </ng-template>
           </ngx-datatable-column>
-          <ngx-datatable-column name="Sales" [flexGrow]="1">
+          <ngx-datatable-column name="Sales" [flexGrow]="1" [sortable]="true">
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
               {{ value }}
             </ng-template>
           </ngx-datatable-column>
-          <ngx-datatable-column name="Stock" [flexGrow]="1">
+          <ngx-datatable-column name="Stock" [flexGrow]="1" [sortable]="true">
             <ng-template let-value="value" ngx-datatable-cell-template>
               {{ value }}
             </ng-template>
           </ngx-datatable-column>
-          <ngx-datatable-column name="Category" [flexGrow]="1.2">
+          <ngx-datatable-column name="Category" [flexGrow]="1.2" [sortable]="true">
             <ng-template let-value="value" ngx-datatable-cell-template>
               {{ value }}
             </ng-template>
